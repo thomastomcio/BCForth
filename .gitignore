@@ -1,0 +1,9 @@
+.config
+*.o
+*.pyc
+
+# VS Code Settings
+.vscode/
+
+# ESP-IDF default build directory name
+build

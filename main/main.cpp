@@ -10,11 +10,13 @@
 
 
 #include "Interfaces.h"
+#include "ESP32_config.h"
 
+extern "C" {
+	void app_main();
+}
 
-
-
-int main()
+void app_main()
 {
 	BCForth::Run();
 }
