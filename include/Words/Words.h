@@ -484,7 +484,7 @@ namespace BCForth
 
 	public:
 
-		QuoteSuite( Base & f, Name s, auto u_op ) : TWord< Base >( f ), fText( s ), fQuoteOp( u_op ) {}
+		QuoteSuite( Base & f, Name s, auto u_op ) : TWord< Base >( f ), fQuoteOp( u_op ), fText( s ) {}
 
 	public:
 

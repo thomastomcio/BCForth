@@ -437,7 +437,7 @@ namespace BCForth
 		// Process a stream of tokens
 		virtual void operator() ( Names && ns )
 		{
-			ExecuteWords( std::move( ns ) );
+				ExecuteWords( std::move( ns ) );
 		}
 
 	public:

@@ -67,7 +67,7 @@ namespace BCForth
 
 
 			using UnarySignOp = StackOp< TForth, SignedIntType, SignedIntType >;
-			using BinSignOp = StackOp< TForth, SignedIntType, SignedIntType, SignedIntType >;
+			//using BinSignOp = StackOp< TForth, SignedIntType, SignedIntType, SignedIntType >;
 
 			forth_comp.InsertWord_2_Dict( "NEG",	std::make_unique< UnarySignOp >( forth_comp, [] ( const auto x ) { return -x; } ), " x -- -x " );
 

@@ -64,7 +64,7 @@ namespace BCForth
 					// Call PAD to push its addr onto the data stack
 					auto pad_stat = forth_comp.ExecWord( "PAD" );
 					assert( pad_stat );
-					CellType _pad_addr;
+					CellType _pad_addr = 0;
 					auto stack_stat = forth_comp.GetDataStack().Pop( _pad_addr );
 					assert( stack_stat );
 					forth_comp.GetDataStack().Push( _pad_addr + 1 );

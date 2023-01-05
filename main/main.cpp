@@ -18,6 +18,7 @@ extern "C" {
 
 void app_main()
 {
+	configure_ESP32();
 	BCForth::Run();
 }
 

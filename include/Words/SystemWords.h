@@ -116,9 +116,9 @@ namespace BCForth
 			{
 
 				if( auto * compo_wrd = dynamic_cast< CompoWord< Base > * >(  ( * word_entry )->fWordUP.get() ); compo_wrd && compo_wrd->GetWordsVec().size() > 0 )	// Ok, the word is found but check if this is a proper node
-
+				{
 					if( auto * val_array = dynamic_cast< RawByteArray< Base > * >(  compo_wrd->GetWordsVec()[ 0 ] ) )	// Access the array in the compo word				
-
+					{
 						if( typename DataStack::value_type val {}; GetDataStack().Pop( val ) )		// Ok, try to pop the stack 
 						{							
 							assert( val_array->GetContainer().size() == sizeof( CellType ) );
@@ -129,7 +129,8 @@ namespace BCForth
 						{
 							throw ForthError( "unexpectedly empty stack" );
 						}
-
+					}
+				}
 
 				throw ForthError( "This word cannot be used in this context" );
 

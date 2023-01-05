@@ -31,11 +31,11 @@ namespace BCForth
 
 
 
-	using CellType	= size_t;
+	using CellType	= unsigned long long; //size_t;
 	using RawByte	= unsigned char;
 	using Char		= char;
 
-	using size_type = size_t;
+	using size_type = unsigned long long; //size_t;
 
 	using SignedIntType = long long;		// it is good and efficient to have the SignedIntType 
 											// the same length as the basic CellType (otherwise e.g. address
