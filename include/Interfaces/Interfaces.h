@@ -87,7 +87,7 @@ All operations on the stack in the Reverse Polish Notation
 		RandomModule()( F_compiler );
 		TimeModule()( F_compiler );
 
-		FileForthModule( "../add_ons/AddOns.txt" )( F_compiler );	// new definitions can be added to the text file AddOns.txt
+		//FileForthModule( "../add_ons/AddOns.txt" )( F_compiler );	// new definitions can be added to the text file AddOns.txt
 
 
 
