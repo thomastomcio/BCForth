@@ -18,8 +18,10 @@ extern "C" {
 
 void app_main()
 {
-	configure_ESP32();
+	ESP32::register_spiffs();
+	ESP32::configure();
 	BCForth::Run();
+	ESP32::unregister_spiffs();
 }
 
 

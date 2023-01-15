@@ -128,8 +128,16 @@ namespace BCForth
 		void operator () ( TForthCompiler & forth_comp ) override
 		{
 			if( std::ifstream fs( fFModulePath ); fs )
+			{
+				std::cout << "\n\"" + fFModulePath.string() + "\" file successfully loaded" << std::endl;
 				for( TForthReader fileReader; fs; forth_comp( fileReader( fs ) ) ) 
 					;	
+			}
+			else
+			{
+				std::cerr << "\n\"" + fFModulePath.string() + "\" file not loaded" << endl;
+			}
+				
 		}
 
 	};
